@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	4.11.3
+Version:	4.11.4
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -107,6 +107,9 @@ Shared library for KGet.
 rm -f %{buildroot}%{_kde_libdir}/libkgetcore.so
 
 %changelog
+* Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.4-1
+- New version 4.11.4
+
 * Wed Nov 06 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.11.3-1
 - New version 4.11.3
 
