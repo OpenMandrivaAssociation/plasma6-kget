@@ -15,10 +15,10 @@ Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
 BuildRequires:	gpgme-devel
-BuildRequires:	kdebase-devel
+BuildRequires:	kde-baseapps-devel
 #BuildRequires:	kde-workspace-devel
 BuildRequires:	kdelibs-devel
-BuildRequires:	kdepimlibs4-devel
+BuildRequires:	kdepimlibs-devel
 BuildRequires:	libktorrent-devel
 BuildRequires:	nepomuk-core-devel
 BuildRequires:	nepomuk-widgets-devel
