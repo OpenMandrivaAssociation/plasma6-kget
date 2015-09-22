@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kget-15.08.0.tar.xz: d77fb592fee17cc8856a55678af7ca36d87d9a47
+sources:
+  kget-15.08.1.tar.xz: 41f1dfb1020270ded75a25603ce111eb5d38bfb0
