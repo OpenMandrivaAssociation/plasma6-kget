@@ -1,7 +1,7 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	15.12.3
-Release:	2
+Version:	16.04.0
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -64,7 +64,6 @@ Features:
 %{_kde_libdir}/kde4/plasma_engine_kget.so
 %{_kde_libdir}/kde4/kcm_kget_checksumsearchfactory.so
 %{_kde_libdir}/kde4/kcm_kget_metalinkfactory.so
-%{_kde_libdir}/kde4/kcm_kget_bittorrentfactory.so
 %{_kde_libdir}/kde4/kcm_kget_mirrorsearchfactory.so
 %{_kde_libdir}/kde4/kcm_kget_mmsfactory.so
 %{_kde_libdir}/kde4/kcm_kget_multisegkiofactory.so
