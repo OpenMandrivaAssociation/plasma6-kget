@@ -1,7 +1,7 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
 Version:	16.04.3
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -16,16 +16,13 @@ Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%
 BuildRequires:	boost-devel
 BuildRequires:	gpgme-devel
 BuildRequires:	kde-baseapps-devel
-#BuildRequires:	kde-workspace-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	kdepimlibs-devel
 BuildRequires:	libktorrent-devel
-BuildRequires:	nepomuk-core-devel
-BuildRequires:	nepomuk-widgets-devel
 BuildRequires:	pkgconfig(libmms)
 BuildRequires:	pkgconfig(qca2)
-BuildRequires:	pkgconfig(shared-desktop-ontologies)
 BuildRequires:	pkgconfig(sqlite3)
+BuildRequires:	cmake(LibKTorrent)
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 
 %description
@@ -70,8 +67,6 @@ Features:
 %{_kde_libdir}/kde4/plasma_kget_barapplet.so
 %{_kde_libdir}/kde4/plasma_kget_piechart.so
 %{_kde_datadir}/config.kcfg/kget*
-%{_kde_datadir}/ontology/kde/kget_history.ontology
-%{_kde_datadir}/ontology/kde/kget_history.trig
 %{_kde_iconsdir}/*/*/apps/kget.*
 %{_datadir}/dbus-1/services/org.kde.kget.service
 
