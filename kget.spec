@@ -22,7 +22,6 @@ BuildRequires:	libktorrent-devel
 BuildRequires:	pkgconfig(libmms)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(sqlite3)
-BuildRequires:	cmake(LibKTorrent)
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 
 %description
