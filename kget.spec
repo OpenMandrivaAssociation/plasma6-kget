@@ -15,12 +15,13 @@ Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
 BuildRequires:	gpgme-devel
-BuildRequires:	kde-baseapps-devel
-BuildRequires:	kdelibs-devel
 BuildRequires:	libktorrent-devel
 BuildRequires:	pkgconfig(libmms)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(sqlite3)
+BuildRequires:	cmake(KF5Akonadi)
+BuildRequires:	cmake(KF5AkonadiContact)
+BuildRequires:	cmake(ECM)
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 
 %description
@@ -36,36 +37,21 @@ Features:
   with checksums and other information.
 
 %files
-%doc %{_kde_docdir}/HTML/*/kget
-%{_kde_bindir}/kget
-%{_kde_applicationsdir}/kget.desktop
-%{_kde_appsdir}/kget
-%{_kde_appsdir}/kconf_update/kget*
-%{_kde_appsdir}/dolphinpart/kpartplugins/kget_plug_in.rc
-%{_kde_appsdir}/dolphinpart/kpartplugins/kget_plug_in.desktop
-%{_kde_appsdir}/khtml/kpartplugins/kget_plug_in.rc
-%{_kde_appsdir}/khtml/kpartplugins/kget_plug_in.desktop
-%{_kde_appsdir}/kwebkitpart/kpartplugins/kget_plug_in.desktop
-%{_kde_appsdir}/kwebkitpart/kpartplugins/kget_plug_in.rc
-%{_kde_services}/kget_*
-%{_kde_services}/plasma-engine-kget.desktop
-%{_kde_services}/kgetbarapplet-default.desktop
-%{_kde_services}/kgetpiechartapplet-default.desktop
-%{_kde_services}/plasma-runner-kget.desktop
-%{_kde_services}/ServiceMenus/kget_download.desktop
-%{_kde_servicetypes}/kget_*
-%{_kde_libdir}/kde4/krunner_kget.so
-%{_kde_libdir}/kde4/kget_*
-%{_kde_libdir}/kde4/plasma_engine_kget.so
-%{_kde_libdir}/kde4/kcm_kget_checksumsearchfactory.so
-%{_kde_libdir}/kde4/kcm_kget_metalinkfactory.so
-%{_kde_libdir}/kde4/kcm_kget_mirrorsearchfactory.so
-%{_kde_libdir}/kde4/kcm_kget_mmsfactory.so
-%{_kde_libdir}/kde4/kcm_kget_multisegkiofactory.so
-%{_kde_libdir}/kde4/plasma_kget_barapplet.so
-%{_kde_libdir}/kde4/plasma_kget_piechart.so
-%{_kde_datadir}/config.kcfg/kget*
-%{_kde_iconsdir}/*/*/apps/kget.*
+%doc %{_docdir}/HTML/*/kget
+%{_bindir}/kget
+%{_applicationsdir}/kget.desktop
+%{_libdir}/kde4/krunner_kget.so
+%{_libdir}/kde4/kget_*
+%{_libdir}/kde4/plasma_engine_kget.so
+%{_libdir}/kde4/kcm_kget_checksumsearchfactory.so
+%{_libdir}/kde4/kcm_kget_metalinkfactory.so
+%{_libdir}/kde4/kcm_kget_mirrorsearchfactory.so
+%{_libdir}/kde4/kcm_kget_mmsfactory.so
+%{_libdir}/kde4/kcm_kget_multisegkiofactory.so
+%{_libdir}/kde4/plasma_kget_barapplet.so
+%{_libdir}/kde4/plasma_kget_piechart.so
+%{_datadir}/config.kcfg/kget*
+%{_iconsdir}/*/*/apps/kget.*
 %{_datadir}/dbus-1/services/org.kde.kget.service
 
 #----------------------------------------------------------------------------
@@ -81,19 +67,19 @@ Group:		System/Libraries
 Shared library for KGet.
 
 %files -n %{libkgetcore}
-%{_kde_libdir}/libkgetcore.so.%{kgetcore_major}*
+%{_libdir}/libkgetcore.so.%{kgetcore_major}*
 
 #----------------------------------------------------------------------------
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde4 -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
-%make
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
 # We don't need it because there are no headers anyway
-rm -f %{buildroot}%{_kde_libdir}/libkgetcore.so
+rm -f %{buildroot}%{_libdir}/libkgetcore.so
