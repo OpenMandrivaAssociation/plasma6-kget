@@ -47,6 +47,7 @@ Features:
 %{_kde_appsdir}/khtml/kpartplugins/kget_plug_in.desktop
 %{_kde_appsdir}/kwebkitpart/kpartplugins/kget_plug_in.desktop
 %{_kde_appsdir}/kwebkitpart/kpartplugins/kget_plug_in.rc
+%{_datadir}/dbus-1/services/*.service
 %{_kde_services}/kget_*
 %{_kde_services}/plasma-engine-kget.desktop
 %{_kde_services}/kgetbarapplet-default.desktop
