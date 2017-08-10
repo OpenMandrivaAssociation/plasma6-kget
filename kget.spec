@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	17.04.2
+Version:	17.07.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -15,7 +15,6 @@ Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
 BuildRequires:	gpgme-devel
-BuildRequires:	kde-baseapps-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	libktorrent-devel
 BuildRequires:	pkgconfig(libmms)
