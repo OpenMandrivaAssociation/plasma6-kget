@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -15,11 +15,11 @@ Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
 BuildRequires:	gpgme-devel
-BuildRequires:	kdelibs-devel
 BuildRequires:	libktorrent-devel
 BuildRequires:	pkgconfig(libmms)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(sqlite3)
+BuildRequires:	cmake(KF5Completion) cmake(KF5Config) cmake(KF5ConfigWidgets) cmake(KF5CoreAddons) cmake(KF5I18n) cmake(KF5IconThemes) cmake(KF5KDELibs4Support) cmake(KF5KIO) cmake(KF5Notifications) cmake(KF5Service) cmake(KF5WidgetsAddons) cmake(KF5XmlGui) cmake(Qt5Core) cmake(Qt5DBus) cmake(Qt5Gui) cmake(Qt5Network) cmake(Qt5Sql) cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Gpgmepp) cmake(Qca-qt5) cmake(QGpgme) cmake(ECM) cmake ninja
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 
 %description
@@ -34,42 +34,50 @@ Features:
 - Metalink support which contains multiple URLs for downloads, along
   with checksums and other information.
 
-%files
-%doc %{_kde_docdir}/HTML/*/kget
-%{_kde_bindir}/kget
-%{_kde_applicationsdir}/kget.desktop
-%{_kde_appsdir}/kget
-%{_kde_appsdir}/kconf_update/kget*
-%{_kde_appsdir}/dolphinpart/kpartplugins/kget_plug_in.rc
-%{_kde_appsdir}/dolphinpart/kpartplugins/kget_plug_in.desktop
-%{_kde_appsdir}/khtml/kpartplugins/kget_plug_in.rc
-%{_kde_appsdir}/khtml/kpartplugins/kget_plug_in.desktop
-%{_kde_appsdir}/kwebkitpart/kpartplugins/kget_plug_in.desktop
-%{_kde_appsdir}/kwebkitpart/kpartplugins/kget_plug_in.rc
-%{_datadir}/dbus-1/services/*.service
-%{_kde_services}/kget_*
-%{_kde_services}/plasma-engine-kget.desktop
-%{_kde_services}/kgetbarapplet-default.desktop
-%{_kde_services}/kgetpiechartapplet-default.desktop
-%{_kde_services}/plasma-runner-kget.desktop
-%{_kde_services}/ServiceMenus/kget_download.desktop
-%{_kde_servicetypes}/kget_*
-%{_kde_libdir}/kde4/krunner_kget.so
-%{_kde_libdir}/kde4/kget_*
-%{_kde_libdir}/kde4/plasma_engine_kget.so
-%{_kde_libdir}/kde4/kcm_kget_checksumsearchfactory.so
-%{_kde_libdir}/kde4/kcm_kget_metalinkfactory.so
-%{_kde_libdir}/kde4/kcm_kget_mirrorsearchfactory.so
-%{_kde_libdir}/kde4/kcm_kget_mmsfactory.so
-%{_kde_libdir}/kde4/kcm_kget_multisegkiofactory.so
-%{_kde_libdir}/kde4/plasma_kget_barapplet.so
-%{_kde_libdir}/kde4/plasma_kget_piechart.so
-%{_kde_datadir}/config.kcfg/kget*
-%{_kde_iconsdir}/*/*/apps/kget.*
+%files -f %{name}.lang
+%{_bindir}/kget
+%{_datadir}/config.kcfg/kget*.kcfg
+%{_datadir}/dbus-1/services/org.kde.kget.service
+%{_datadir}/icons/hicolor/*/*/*
+%{_libdir}/qt5/plugins/kcm_kget_bittorrentfactory.so
+%{_libdir}/qt5/plugins/kcm_kget_checksumsearchfactory.so
+%{_libdir}/qt5/plugins/kcm_kget_metalinkfactory.so
+%{_libdir}/qt5/plugins/kcm_kget_mirrorsearchfactory.so
+%{_libdir}/qt5/plugins/kcm_kget_mmsfactory.so
+%{_libdir}/qt5/plugins/kcm_kget_multisegkiofactory.so
+%{_libdir}/qt5/plugins/kget/kget_bittorrent.so
+%{_libdir}/qt5/plugins/kget/kget_checksumsearchfactory.so
+%{_libdir}/qt5/plugins/kget/kget_kio.so
+%{_libdir}/qt5/plugins/kget/kget_metalinkfactory.so
+%{_libdir}/qt5/plugins/kget/kget_mirrorsearchfactory.so
+%{_libdir}/qt5/plugins/kget/kget_mmsfactory.so
+%{_libdir}/qt5/plugins/kget/kget_multisegkiofactory.so
+%{_libdir}/qt5/plugins/kget_browser_integration.so
+%{_datadir}/applications/org.kde.kget.desktop
+%{_datadir}/dolphinpart/kpartplugins/kget_plug_in.desktop
+%{_datadir}/dolphinpart/kpartplugins/kget_plug_in.rc
+%{_datadir}/kconf_update/kget.upd
+%{_datadir}/kconf_update/kget_limitdownloads.pl
+%{_datadir}/kconf_update/kget_sensitive.pl
+%{_datadir}/kget/pics/kget_splash.png
+%{_datadir}/khtml/kpartplugins/kget_plug_in.desktop
+%{_datadir}/khtml/kpartplugins/kget_plug_in.rc
+%{_datadir}/knotifications5/kget.notifyrc
+%{_datadir}/kservices5/ServiceMenus/kget_download.desktop
+%{_datadir}/kservices5/kget_bittorrentfactory_config.desktop
+%{_datadir}/kservices5/kget_checksumsearchfactory_config.desktop
+%{_datadir}/kservices5/kget_metalinkfactory_config.desktop
+%{_datadir}/kservices5/kget_mirrorsearchfactory_config.desktop
+%{_datadir}/kservices5/kget_mmsfactory_config.desktop
+%{_datadir}/kservices5/kget_multisegkiofactory_config.desktop
+%{_datadir}/kservicetypes5/kget_plugin.desktop
+%{_datadir}/kwebkitpart/kpartplugins/kget_plug_in.desktop
+%{_datadir}/kwebkitpart/kpartplugins/kget_plug_in.rc
+%{_datadir}/kxmlgui5/kget/kgetui.rc
 
 #----------------------------------------------------------------------------
 
-%define kgetcore_major 4
+%define kgetcore_major 5
 %define libkgetcore %mklibname kgetcore %{kgetcore_major}
 
 %package -n %{libkgetcore}
@@ -88,11 +96,13 @@ Shared library for KGet.
 %setup -q
 
 %build
-%cmake_kde4 -DCMAKE_MINIMUM_REQUIRED_VERSION=2.6
-%make
+%cmake_kde5
+%ninja
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
 # We don't need it because there are no headers anyway
 rm -f %{buildroot}%{_kde_libdir}/libkgetcore.so
+
+%find_lang %{name} --all-name --with-html --with-man
