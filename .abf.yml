@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kget-17.12.1.tar.xz: 41e57399219a49c52a00511ca43f153b634a7684
+sources:
+  kget-17.12.2.tar.xz: 64a944ad170ae7d33e008fff4e635873b3f21ce8

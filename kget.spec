@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	17.12.1
+Version:	 17.12.2
 Release:	1
 Epoch:		3
 License:	GPLv2+
