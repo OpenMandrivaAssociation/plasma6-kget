@@ -19,7 +19,7 @@ BuildRequires:	libktorrent-devel
 BuildRequires:	pkgconfig(libmms)
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	pkgconfig(sqlite3)
-BuildRequires:	cmake(KF5Completion) cmake(KF5Config) cmake(KF5ConfigWidgets) cmake(KF5CoreAddons) cmake(KF5I18n) cmake(KF5IconThemes) cmake(KF5KDELibs4Support) cmake(KF5KIO) cmake(KF5Notifications) cmake(KF5Service) cmake(KF5WidgetsAddons) cmake(KF5XmlGui) cmake(Qt5Core) cmake(Qt5DBus) cmake(Qt5Gui) cmake(Qt5Network) cmake(Qt5Sql) cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Gpgmepp) cmake(Qca-qt5) cmake(QGpgme) cmake(ECM) cmake ninja
+BuildRequires:	cmake(KF5Completion) cmake(KF5Config) cmake(KF5ConfigWidgets) cmake(KF5CoreAddons) cmake(KF5I18n) cmake(KF5IconThemes) cmake(KF5KDELibs4Support) cmake(KF5KIO) cmake(KF5Notifications) cmake(KF5Service) cmake(KF5WidgetsAddons) cmake(KF5XmlGui) cmake(Qt5Core) cmake(Qt5DBus) cmake(Qt5Gui) cmake(Qt5Network) cmake(Qt5Sql) cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Gpgmepp) cmake(Qca-qt5) cmake(QGpgme) cmake(ECM) cmake(Qt5Test) cmake ninja
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 
 %description
