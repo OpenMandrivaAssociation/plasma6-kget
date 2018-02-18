@@ -92,7 +92,7 @@ Group:		System/Libraries
 Shared library for KGet.
 
 %files -n %{libkgetcore}
-%{_kde_libdir}/libkgetcore.so.%{kgetcore_major}*
+%{_kde5_libdir}/libkgetcore.so.%{kgetcore_major}*
 
 #----------------------------------------------------------------------------
 
@@ -107,6 +107,6 @@ Shared library for KGet.
 %ninja_install -C build
 
 # We don't need it because there are no headers anyway
-rm -f %{buildroot}%{_kde_libdir}/libkgetcore.so
+rm -f %{buildroot}%{_kde5_libdir}/libkgetcore.so
 
 %find_lang %{name} --all-name --with-html --with-man
