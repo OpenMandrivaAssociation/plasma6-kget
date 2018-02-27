@@ -17,7 +17,7 @@ BuildRequires:	boost-devel
 BuildRequires:	gpgme-devel
 BuildRequires:	libktorrent-devel
 BuildRequires:	pkgconfig(libmms)
-BuildRequires:	pkgconfig(qca2)
+BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	cmake(KF5Completion) cmake(KF5Config) cmake(KF5ConfigWidgets) cmake(KF5CoreAddons) cmake(KF5I18n) 
 BuildRequires:	cmake(KF5IconThemes) cmake(KF5KDELibs4Support) cmake(KF5KIO) cmake(KF5Notifications) cmake(KF5Service) 
