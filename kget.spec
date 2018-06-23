@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	 17.12.2
+Version:	 18.04.2
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -41,6 +41,7 @@ Features:
 %files -f %{name}.lang
 %{_bindir}/kget
 %{_datadir}/config.kcfg/kget*.kcfg
+%{_datadir}/metainfo/org.kde.kget.appdata.xml
 %{_datadir}/dbus-1/services/org.kde.kget.service
 %{_datadir}/icons/hicolor/*/*/*
 %{_libdir}/qt5/plugins/kcm_kget_bittorrentfactory.so
