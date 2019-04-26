@@ -1,8 +1,7 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Epoch:		3
 Version:	19.04.0
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -25,6 +24,7 @@ BuildRequires:	cmake(KF5WidgetsAddons) cmake(KF5XmlGui) cmake(Qt5Core) cmake(Qt5
 BuildRequires:	cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Gpgmepp) cmake(Qca-qt5) cmake(QGpgme) cmake(ECM) cmake(Qt5Test) cmake ninja
 BuildRequires:	cmake(KF5KCMUtils) cmake(KF5NotifyConfig) cmake(KF5Wallet)
 Conflicts:	kdenetwork4-devel < 3:4.11.0
+Obsoletes:	%{name} < 3:19.04.0-3
 
 %description
 KGet is a versatile and user-friendly download manager.
@@ -89,6 +89,7 @@ Features:
 %package -n %{libkgetcore}
 Summary:	Shared library for KGet
 Group:		System/Libraries
+Obsoletes:	%{mklibname kgetcore 5} < 3:19.04.0-3
 
 %description -n %{libkgetcore}
 Shared library for KGet.
