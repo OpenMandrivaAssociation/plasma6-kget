@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	19.04.2
+Version:	19.04.3
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
