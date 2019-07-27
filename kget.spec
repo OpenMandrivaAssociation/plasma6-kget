@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -39,7 +39,7 @@ Features:
   with checksums and other information.
 
 %files -f %{name}.lang
-%{_sysconfdir}/xdg/kget.categories
+%{_datadir}/qlogging-categories5/kget.categories
 %{_bindir}/kget
 %{_datadir}/config.kcfg/kget*.kcfg
 %{_datadir}/metainfo/org.kde.kget.appdata.xml
