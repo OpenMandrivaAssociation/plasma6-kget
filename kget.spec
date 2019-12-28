@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -11,7 +11,7 @@ Url:		http://www.kde.org
 %else
 %define ftpdir stable
 %endif
-Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
 BuildRequires:	gpgme-devel
 BuildRequires:	libktorrent-devel
