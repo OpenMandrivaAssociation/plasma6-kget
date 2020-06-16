@@ -1,7 +1,7 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
 Version:	20.04.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -18,11 +18,34 @@ BuildRequires:	libktorrent-devel
 BuildRequires:	pkgconfig(libmms)
 BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	pkgconfig(sqlite3)
-BuildRequires:	cmake(KF5Completion) cmake(KF5Config) cmake(KF5ConfigWidgets) cmake(KF5CoreAddons) cmake(KF5I18n) 
-BuildRequires:	cmake(KF5IconThemes) cmake(KF5KDELibs4Support) cmake(KF5KIO) cmake(KF5Notifications) cmake(KF5Service) 
-BuildRequires:	cmake(KF5WidgetsAddons) cmake(KF5XmlGui) cmake(Qt5Core) cmake(Qt5DBus) cmake(Qt5Gui) cmake(Qt5Network) cmake(Qt5Sql) 
-BuildRequires:	cmake(Qt5Widgets) cmake(Qt5Xml) cmake(Gpgmepp) cmake(Qca-qt5) cmake(QGpgme) cmake(ECM) cmake(Qt5Test) cmake ninja
-BuildRequires:	cmake(KF5KCMUtils) cmake(KF5NotifyConfig) cmake(KF5Wallet)
+BuildRequires:	cmake(KF5Completion)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5IconThemes)
+BuildRequires:	cmake(KF5KDELibs4Support)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5Service)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5DBus)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Network)
+BuildRequires:	cmake(Qt5Sql)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Xml)
+BuildRequires:	cmake(Gpgmepp)
+BuildRequires:	cmake(Qca-qt5)
+BuildRequires:	cmake(QGpgme)
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt5Test)
+BuildRequires:	cmake(KF5KCMUtils)
+BuildRequires:	cmake(KF5NotifyConfig)
+BuildRequires:	cmake(KF5Wallet)
+BuildRequires:	cmake(LibKWorkspace)
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 Obsoletes:	%{name} < 3:19.04.0-3
 
