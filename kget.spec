@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -68,13 +68,13 @@ Features:
 %{_datadir}/metainfo/org.kde.kget.appdata.xml
 %{_datadir}/dbus-1/services/org.kde.kget.service
 %{_datadir}/icons/hicolor/*/*/*
-%{_libdir}/qt5/plugins/kcm_kget_bittorrentfactory.so
+#{_libdir}/qt5/plugins/kcm_kget_bittorrentfactory.so
 %{_libdir}/qt5/plugins/kcm_kget_checksumsearchfactory.so
 %{_libdir}/qt5/plugins/kcm_kget_metalinkfactory.so
 %{_libdir}/qt5/plugins/kcm_kget_mirrorsearchfactory.so
 %{_libdir}/qt5/plugins/kcm_kget_mmsfactory.so
 %{_libdir}/qt5/plugins/kcm_kget_multisegkiofactory.so
-%{_libdir}/qt5/plugins/kget/kget_bittorrent.so
+#{_libdir}/qt5/plugins/kget/kget_bittorrent.so
 %{_libdir}/qt5/plugins/kget/kget_checksumsearchfactory.so
 %{_libdir}/qt5/plugins/kget/kget_kio.so
 %{_libdir}/qt5/plugins/kget/kget_metalinkfactory.so
@@ -93,7 +93,7 @@ Features:
 %{_datadir}/khtml/kpartplugins/kget_plug_in.rc
 %{_datadir}/knotifications5/kget.notifyrc
 %{_datadir}/kservices5/ServiceMenus/kget_download.desktop
-%{_datadir}/kservices5/kget_bittorrentfactory_config.desktop
+#{_datadir}/kservices5/kget_bittorrentfactory_config.desktop
 %{_datadir}/kservices5/kget_checksumsearchfactory_config.desktop
 %{_datadir}/kservices5/kget_metalinkfactory_config.desktop
 %{_datadir}/kservices5/kget_mirrorsearchfactory_config.desktop
