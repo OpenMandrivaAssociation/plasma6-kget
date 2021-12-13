@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -86,9 +86,6 @@ Features:
 %{_datadir}/applications/org.kde.kget.desktop
 %{_datadir}/dolphinpart/kpartplugins/kget_plug_in.desktop
 %{_datadir}/dolphinpart/kpartplugins/kget_plug_in.rc
-%{_datadir}/kconf_update/kget.upd
-%{_datadir}/kconf_update/kget_limitdownloads.pl
-%{_datadir}/kconf_update/kget_sensitive.pl
 %{_datadir}/kget/pics/kget_splash.png
 %{_datadir}/khtml/kpartplugins/kget_plug_in.desktop
 %{_datadir}/khtml/kpartplugins/kget_plug_in.rc
