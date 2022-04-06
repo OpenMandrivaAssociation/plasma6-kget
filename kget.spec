@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -69,12 +69,7 @@ Features:
 %{_datadir}/metainfo/org.kde.kget.appdata.xml
 %{_datadir}/dbus-1/services/org.kde.kget.service
 %{_datadir}/icons/hicolor/*/*/*
-%{_libdir}/qt5/plugins/kcm_kget_bittorrentfactory.so
-%{_libdir}/qt5/plugins/kcm_kget_checksumsearchfactory.so
-%{_libdir}/qt5/plugins/kcm_kget_metalinkfactory.so
-%{_libdir}/qt5/plugins/kcm_kget_mirrorsearchfactory.so
-%{_libdir}/qt5/plugins/kcm_kget_mmsfactory.so
-%{_libdir}/qt5/plugins/kcm_kget_multisegkiofactory.so
+%dir %{_libdir}/qt5/plugins/kget
 %{_libdir}/qt5/plugins/kget/kget_bittorrent.so
 %{_libdir}/qt5/plugins/kget/kget_checksumsearchfactory.so
 %{_libdir}/qt5/plugins/kget/kget_kio.so
@@ -82,25 +77,19 @@ Features:
 %{_libdir}/qt5/plugins/kget/kget_mirrorsearchfactory.so
 %{_libdir}/qt5/plugins/kget/kget_mmsfactory.so
 %{_libdir}/qt5/plugins/kget/kget_multisegkiofactory.so
-%{_libdir}/qt5/plugins/kget_browser_integration.so
+%dir %{_libdir}/qt5/plugins/kget/kcms
+%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_bittorrentfactory.so
+%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_checksumsearchfactory.so
+%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_metalinkfactory.so
+%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_mirrorsearchfactory.so
+%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_mmsfactory.so
+%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_multisegkiofactory.so
 %{_datadir}/applications/org.kde.kget.desktop
-%{_datadir}/dolphinpart/kpartplugins/kget_plug_in.desktop
-%{_datadir}/dolphinpart/kpartplugins/kget_plug_in.rc
 %{_datadir}/kget/pics/kget_splash.png
-%{_datadir}/khtml/kpartplugins/kget_plug_in.desktop
-%{_datadir}/khtml/kpartplugins/kget_plug_in.rc
 %{_datadir}/knotifications5/kget.notifyrc
-%{_datadir}/kservices5/ServiceMenus/kget_download.desktop
-%{_datadir}/kservices5/kget_bittorrentfactory_config.desktop
-%{_datadir}/kservices5/kget_checksumsearchfactory_config.desktop
-%{_datadir}/kservices5/kget_metalinkfactory_config.desktop
-%{_datadir}/kservices5/kget_mirrorsearchfactory_config.desktop
-%{_datadir}/kservices5/kget_mmsfactory_config.desktop
-%{_datadir}/kservices5/kget_multisegkiofactory_config.desktop
 %{_datadir}/kservicetypes5/kget_plugin.desktop
-%{_datadir}/kwebkitpart/kpartplugins/kget_plug_in.desktop
-%{_datadir}/kwebkitpart/kpartplugins/kget_plug_in.rc
 %{_datadir}/kxmlgui5/kget/kgetui.rc
+%{_datadir}/kio/servicemenus/kget_download.desktop
 
 #----------------------------------------------------------------------------
 
