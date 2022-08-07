@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	22.04.2
+Version:	22.07.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -77,13 +77,13 @@ Features:
 %{_libdir}/qt5/plugins/kget/kget_mirrorsearchfactory.so
 %{_libdir}/qt5/plugins/kget/kget_mmsfactory.so
 %{_libdir}/qt5/plugins/kget/kget_multisegkiofactory.so
-%dir %{_libdir}/qt5/plugins/kget/kcms
-%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_bittorrentfactory.so
-%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_checksumsearchfactory.so
-%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_metalinkfactory.so
-%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_mirrorsearchfactory.so
-%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_mmsfactory.so
-%{_libdir}/qt5/plugins/kget/kcms/kcm_kget_multisegkiofactory.so
+%dir %{_libdir}/qt5/plugins/kget_kcms
+%{_libdir}/qt5/plugins/kget_kcms/kcm_kget_bittorrentfactory.so
+%{_libdir}/qt5/plugins/kget_kcms/kcm_kget_checksumsearchfactory.so
+%{_libdir}/qt5/plugins/kget_kcms/kcm_kget_metalinkfactory.so
+%{_libdir}/qt5/plugins/kget_kcms/kcm_kget_mirrorsearchfactory.so
+%{_libdir}/qt5/plugins/kget_kcms/kcm_kget_mmsfactory.so
+%{_libdir}/qt5/plugins/kget_kcms/kcm_kget_multisegkiofactory.so
 %{_datadir}/applications/org.kde.kget.desktop
 %{_datadir}/kget/pics/kget_splash.png
 %{_datadir}/knotifications5/kget.notifyrc
