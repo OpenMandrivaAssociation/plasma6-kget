@@ -46,7 +46,7 @@ BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(KF5KCMUtils)
 BuildRequires:	cmake(KF5NotifyConfig)
 BuildRequires:	cmake(KF5Wallet)
-BuildRequires:	cmake(LibKWorkspace)
+BuildRequires:	cmake(LibKWorkspace) < 5.27.50
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 Obsoletes:	%{name} < 3:19.04.0-3
 
