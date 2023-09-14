@@ -1,6 +1,6 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	23.08.0
+Version:	23.08.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
