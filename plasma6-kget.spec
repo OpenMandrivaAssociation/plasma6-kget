@@ -1,17 +1,17 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		plasma6-kget
 Version:	24.01.90
-Release:	3
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
 %else
 %define ftpdir stable
 %endif
-Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/kget-%{version}.tar.xz
+Source0:	https://download.kde.org/%{ftpdir}/release-service/%{version}/src/kget-%{version}.tar.xz
 BuildRequires:	boost-devel
 BuildRequires:	gpgme-devel
 BuildRequires:	pkgconfig(libmms)
@@ -34,6 +34,9 @@ BuildRequires:	cmake(Qt6DBus)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Network)
 BuildRequires:	cmake(Qt6Sql)
+BuildRequires:	cmake(Qt6Qml)
+BuildRequires:	cmake(Qt6QmlCore)
+BuildRequires:	cmake(Qt6QmlNetwork)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Xml)
 BuildRequires:	cmake(Gpgmepp)
@@ -44,7 +47,14 @@ BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(KF6KCMUtils)
 BuildRequires:	cmake(KF6NotifyConfig)
 BuildRequires:	cmake(KF6Wallet)
+BuildRequires:	cmake(KF6StatusNotifierItem)
+BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(LibKWorkspace) < 6.27.60
+BuildRequires:	qt6-qtbase-theme-gtk3
+BuildRequires:	qt6-qtbase-sql-postgresql
+BuildRequires:	qt6-qtbase-sql-odbc
+BuildRequires:	qt6-qtbase-sql-mariadb
+BuildRequires:	qt6-qtbase-sql-firebird
 
 %description
 KGet is a versatile and user-friendly download manager.
