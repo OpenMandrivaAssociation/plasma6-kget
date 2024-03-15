@@ -4,7 +4,7 @@
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		plasma6-kget
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org
