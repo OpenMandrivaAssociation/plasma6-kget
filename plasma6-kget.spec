@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		plasma6-kget
-Version:	24.05.1
+Version:	24.05.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
