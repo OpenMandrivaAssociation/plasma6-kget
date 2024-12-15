@@ -3,8 +3,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		plasma6-kget
-Version:	24.08.3
-Release:	%{?git:0.%{git}.}2
+Version:	24.12.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org
@@ -101,7 +101,6 @@ Features:
 %{_datadir}/kget/pics/kget_splash.png
 %{_datadir}/knotifications6/kget.notifyrc
 %{_datadir}/kio/servicemenus/kget_download.desktop
-%{_datadir}/kio/servicemenus/kget_plugin.desktop
 %{_libdir}/libkgetcore.so*
 
 #----------------------------------------------------------------------------
