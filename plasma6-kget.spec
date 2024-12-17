@@ -62,6 +62,7 @@ BuildRequires:	qt6-qtbase-sql-postgresql
 BuildRequires:	qt6-qtbase-sql-odbc
 BuildRequires:	qt6-qtbase-sql-mariadb
 BuildRequires:	qt6-qtbase-sql-firebird
+BuildRequires:	plasma6-xdg-desktop-portal-kde
 
 %description
 KGet is a versatile and user-friendly download manager.
