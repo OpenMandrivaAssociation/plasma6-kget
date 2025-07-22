@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Versatile and user-friendly download manager for KDE4
 Name:		kget
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -64,12 +64,20 @@ BuildRequires:	qt6-qtbase-sql-mariadb
 BuildRequires:	qt6-qtbase-sql-firebird
 BuildRequires:	plasma6-xdg-desktop-portal-kde
 
+%rename plasma6-kget
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
+%patchlist
+kget-25.04.3-gpgme-2.0.patch
+
 %description
 KGet is a versatile and user-friendly download manager.
 Features:
 - Downloading files from FTP and HTTP(S) sources.
 - Pausing and resuming of downloading files, as well as the ability
-  to restart   a download.
+  to restart a download.
 - Tells lots of information about current and pending downloads.
 - Embedding into system tray.
 - Integration with the Konqueror web browser.
@@ -103,22 +111,3 @@ Features:
 %{_datadir}/knotifications6/kget.notifyrc
 %{_datadir}/kio/servicemenus/kget_download.desktop
 %{_libdir}/libkgetcore.so*
-
-#----------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kget-%{?git:%{gitbranchd}}%{!?git:%{version}}
-
-%build
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-%ninja
-
-%install
-%ninja_install -C build
-
-# We don't need it because there are no headers anyway
-rm -f %{buildroot}%{_kde6_libdir}/libkgetcore.so
-
-%find_lang %{name} --all-name --with-html --with-man

@@ -1,0 +1,12 @@
+diff -up kget-25.04.3/ui/signaturedlg.cpp.omv~ kget-25.04.3/ui/signaturedlg.cpp
+--- kget-25.04.3/ui/signaturedlg.cpp.omv~	2025-07-22 09:55:20.199463769 +0200
++++ kget-25.04.3/ui/signaturedlg.cpp	2025-07-22 09:56:24.049038139 +0200
+@@ -185,7 +185,7 @@ void SignatureDlg::updateData()
+             QByteArray fingerprint = fingerprintString.toLatin1();
+             const GpgME::Key key = context->key(fingerprint.constData(), err);
+             if (err || key.isNull() || !key.numUserIDs() || !key.numSubkeys()) {
+-                qCDebug(KGET_DEBUG) << "There was an error while loading the key:" << err;
++                qCDebug(KGET_DEBUG) << "There was an error while loading the key:" << err.asStdString();
+             } else {
+                 static const QStringList OWNERTRUST = QStringList()
+                     << i18nc("trust level", "Unknown") << i18nc("trust level", "Undefined") << i18nc("trust level", "Never") << i18nc("trust level", "Marginal")
